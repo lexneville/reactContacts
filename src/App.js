@@ -13,11 +13,16 @@ class App extends React.Component {
 
   handleClick = () => {
     console.log("Button was clicked");
-    const newList = [...this.state.list];
-    newList.push(this.state.contact);
-    this.setState({
-      list: newList,     
-    })
+    if (this.state.contact !== "") {
+      const newList = [...this.state.list];
+      newList.push(this.state.contact);
+      this.setState({
+        list: newList,
+        contact: "",     
+      })
+    } else {
+      return
+    }
   }
  
   handleContact = (e) => {
@@ -39,10 +44,10 @@ class App extends React.Component {
   render() {
     console.log(this.state)
     return (
-      <div>
-        <h1>Simple Contact List</h1>
+      <div className="app">
+        <h1>CONTACT LIST</h1>
+        <input id="inputContact" type="text" placeholder="Enter your number" onChange={this.handleContact} value={this.state.contact}/>
         <button id="addContact" onClick={this.handleClick}>Add Contact</button>
-        <input type="text" placeholder="Enter your contact" onChange={this.handleContact}/>
         <Contacts allContacts={this.state.list} deleteFuncProp={this.handleDelete}/>
       </div>
     )

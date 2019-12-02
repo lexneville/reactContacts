@@ -1,20 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-image: url("./img/addressbook.jpg");
+}
+
+h1 {
+  font-size: 50px;
+  height: 100px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid black;
+
+}
+
 #addContact {
   display:inline-block;
   background-color: royalblue;
   color: #fff;
   font-size: 20px;
-  padding:20px 40px;
+  padding: 0px 30px;
   cursor: pointer;
   margin-right: 20px;
+  height: 40px;
+  border-radius: 30px;
+  height: 50px;
+  margin: 5px 0 0 15px;
+  border: 1px solid black;
 }
 
-.close {
+.delete {
   display:inline-block;
   background-color: red;
   color: #fff;
-  font-size: 14px;
-  padding:10px 20px;
+  font-size: 20px;
+  padding:13px 18px;
   cursor: pointer;
-  margin-left: 20px;
-  margin-bottom: 10px;
+  height: 50px;
+  border-radius: 100px;
+  margin-right: 10px;
+  border: 1px solid black;
 }
+
+#inputContact {
+  border-radius: 100px;
+  width: 160px;
+  border: 1px solid black;
+  padding-left: 8px;
+  height: 50px;
+  margin: 5px 0 0 15px;
+  font-size: 16px;
+
+}
+
+ul {
+  list-style: none;
+  margin-left: 15px;
+  font-size: 30px;
+}
+
+li {
+  margin-top: 5px;
+  background-color: white;
+  padding: 10px 20px 10px;
+  border-radius: 100px;
+  border: 1px solid black;
+}
+
+
