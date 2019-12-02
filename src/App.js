@@ -16,7 +16,7 @@ class App extends React.Component {
     const newList = [...this.state.list];
     newList.push(this.state.contact);
     this.setState({
-      list: newList,      
+      list: newList,     
     })
   }
  
