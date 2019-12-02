@@ -34,36 +34,19 @@ class App extends React.Component {
     this.setState({
       list: newList
     })
-
   }
 
   render() {
     console.log(this.state)
     return (
       <div>
-        <h1>Hello World!</h1>
+        <h1>Simple Contact List</h1>
         <button id="addContact" onClick={this.handleClick}>Add Contact</button>
         <input type="text" placeholder="Enter your contact" onChange={this.handleContact}/>
         <Contacts allContacts={this.state.list} deleteFuncProp={this.handleDelete}/>
       </div>
-
-
-
-
-
-
-
     )
   }
-    
-
-
-
-
-
-
 }
-
-
 
 export default App;
